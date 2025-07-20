@@ -1,49 +1,55 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>زكريا السروري | الملف الشخصي</title>
+  <title>زكريا السروري | مهندس تقني</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <header>
-    <h1>👋 مرحبًا، أنا زكريا السروري</h1>
-    <p>مهتم بتقنية المعلومات، الذكاء الاصطناعي، وتحليل البيانات</p>
+    <div class="container">
+      <img src="zakaria.jpg" alt="Zakaria Photo" class="profile-img">
+      <h1>زكريا السروري</h1>
+      <p>مهندس تقنية معلومات | مطور ويب | محلل بيانات</p>
+      <button onclick="scrollToSection()">تعرف عليّ أكثر</button>
+    </div>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="#about">من أنا</a></li>
-      <li><a href="#projects">مشاريعي</a></li>
-      <li><a href="#contact">تواصل معي</a></li>
-    </ul>
-  </nav>
-
   <section id="about">
-    <h2>من أنا</h2>
-    <p>طالب في كلية الهندسة وتقنية المعلومات - جامعة تعز. أعمل على مشاريع الذكاء الاصطناعي، وأحب تطوير الذات والتعلم المستمر.</p>
+    <div class="container">
+      <h2>نبذة عني</h2>
+      <p>
+        خريج كلية الهندسة وتقنية المعلومات بجامعة تعز. شغوف بتطوير الذات والعمل في مجالات الذكاء الاصطناعي، البرمجة، وتصميم المواقع.
+      </p>
+    </div>
   </section>
 
-  <section id="projects">
-    <h2>مشاريعي</h2>
-    <ul>
-      <li>📱 تطبيق مواقيت الصلاة باستخدام Flutter</li>
-      <li>🛣️ نظام ذكي للكشف عن عيوب الطرق باستخدام YOLOv5</li>
-      <li>🧠 مشروع تحليل البيانات باستخدام Power BI</li>
-    </ul>
+  <section id="skills">
+    <div class="container">
+      <h2>المهارات</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Python, Data Analysis</li>
+        <li>Flutter, Laravel, MySQL</li>
+        <li>Git, GitHub, Firebase</li>
+      </ul>
+    </div>
   </section>
 
   <section id="contact">
-    <h2>تواصل معي</h2>
-    <p>📧 البريد الإلكتروني: zakaria@example.com</p>
-    <p>📱 واتساب: +967-7XXXXXXX</p>
+    <div class="container">
+      <h2>تواصل معي</h2>
+      <p>راسلني عبر:</p>
+      <a href="mailto:zakaria@example.com">📧 zakaria@example.com</a> |
+      <a href="https://linkedin.com/in/zakaria" target="_blank">🔗 لينكدإن</a>
+    </div>
   </section>
 
   <footer>
-    <p>جميع الحقوق محفوظة © زكريا السروري 2025</p>
+    <p>© 2025 زكريا السروري. جميع الحقوق محفوظة.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
