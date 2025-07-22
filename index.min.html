@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="موقع زكريا السروري الشخصي - مهندس تقني ومحلل بيانات متخصص في الذكاء الاصطناعي">
+<meta name="theme-color" content="#3b82f6">
+<title>Zakaria Portfolio</title>
+<style>
+body{font-family:'Segoe UI',sans-serif;margin:0;padding:0;background:#f9f9f9;color:#333}
+header{background:#3b82f6;color:white;padding:2em;text-align:center}
+.about,.skills{padding:2em}
+.about img{max-width:200px;border-radius:50%;height:auto}
+footer{background:#111;color:white;padding:1em;text-align:center}
+button{background:#10b981;color:white;padding:0.5em 1em;border:none;cursor:pointer;border-radius:4px;transition:background-color 0.2s}
+button:hover{background:#059669}
+@media (max-width:768px){header{padding:1em}.about,.skills{padding:1em}.about img{max-width:150px}}button:focus{outline:2px solid #fbbf24;outline-offset:2px}button:active{transform:translateY(1px)}*{box-sizing:border-box}img{max-width:100%;height:auto}html{scroll-behavior:smooth}.loading{opacity:0;animation:fadeIn 0.3s ease-in forwards}@keyframes fadeIn{to{opacity:1}}h1,h2{line-height:1.2}p,li{line-height:1.6}a{color:#3b82f6;text-decoration:none}a:hover{text-decoration:underline}
+</style>
+<link rel="preload" href="zakaria.jpg" as="image" type="image/jpeg">
+</head>
+<body>
+<header>
+<h1>مرحبًا، أنا زكريا السروري</h1>
+<p>مهندس تقني | محلل بيانات | مهتم بالذكاء الاصطناعي</p>
+</header>
+<section class="about">
+<picture>
+<source srcset="zakaria.webp" type="image/webp">
+<img src="zakaria.jpg" alt="صورة زكريا السروري" loading="lazy" width="200" height="200">
+</picture>
+<h2>نبذة عني</h2>
+<p>أنا مهندس تقني أطمح لتقديم حلول رقمية ذكية وتحليل البيانات لتحسين القرارات.</p>
+</section>
+<section class="skills">
+<h2>مهاراتي</h2>
+<ul>
+<li>تحليل البيانات باستخدام Python وPower BI</li>
+<li>برمجة تطبيقات باستخدام Flutter</li>
+<li>تصميم مواقع باستخدام HTML وCSS وJavaScript</li>
+</ul>
+</section>
+<footer>
+<p>تواصل معي: <a href="mailto:zakaria@example.com">zakaria@example.com</a></p>
+<button onclick="showMessage()" type="button">انقر لتحية!</button>
+</footer>
+<script>(function(){'use strict';const elements={};function showMessage(){const notification=document.createElement('div');notification.style.cssText=` position:fixed;top:20px;right:20px;background:#10b981;color:white;padding:1em 2em;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);z-index:1000;animation:slideIn 0.3s ease-out;max-width:300px;text-align:center;`;notification.textContent='مرحبًا!شكرًا لزيارة موقعي الشخصي';if(!document.getElementById('notification-styles')){const style=document.createElement('style');style.id='notification-styles';style.textContent=` @keyframes slideIn{from{transform:translateX(100%);opacity:0;}to{transform:translateX(0);opacity:1;}}@keyframes slideOut{from{transform:translateX(0);opacity:1;}to{transform:translateX(100%);opacity:0;}}`;document.head.appendChild(style);}document.body.appendChild(notification);setTimeout(()=>{notification.style.animation='slideOut 0.3s ease-in';setTimeout(()=>{if(notification.parentNode){notification.parentNode.removeChild(notification);}},300);},3000);}function optimizeImages(){const img=document.querySelector('.about img');if(img){img.loading='lazy';img.onerror=function(){console.warn('Image failed to load:',this.src);this.style.display='none';};img.onload=function(){this.classList.add('loading');};}}function init(){elements.button=document.querySelector('button');elements.sections=document.querySelectorAll('section');optimizeImages();elements.sections.forEach((section,index)=>{setTimeout(()=>{section.classList.add('loading');},index*100);});window.showMessage=showMessage;}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}if(window.performance&&window.performance.mark){window.performance.mark('script-end');}})();</script>
+</body>
+</html>

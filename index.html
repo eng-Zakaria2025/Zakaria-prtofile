@@ -1,21 +1,49 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="موقع زكريا السروري الشخصي - مهندس تقني ومحلل بيانات متخصص في الذكاء الاصطناعي">
+  <meta name="theme-color" content="#3b82f6">
   <title>Zakaria Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Critical CSS inlined for faster render -->
+  <style>
+    body{font-family:'Segoe UI',sans-serif;margin:0;padding:0;background:#f9f9f9;color:#333}
+    header{background:#3b82f6;color:white;padding:2em;text-align:center}
+    .about,.skills{padding:2em}
+    .about img{max-width:200px;border-radius:50%;height:auto}
+    footer{background:#111;color:white;padding:1em;text-align:center}
+    button{background:#10b981;color:white;padding:0.5em 1em;border:none;cursor:pointer;border-radius:4px;transition:background-color 0.2s}
+    button:hover{background:#059669}
+  </style>
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="zakaria.jpg" as="image" type="image/jpeg">
+  
+  <!-- Defer non-critical CSS -->
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+  
+  <!-- DNS prefetch for external resources if any -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
 </head>
 <body>
   <header>
     <h1>مرحبًا، أنا زكريا السروري</h1>
     <p>مهندس تقني | محلل بيانات | مهتم بالذكاء الاصطناعي</p>
   </header>
+  
   <section class="about">
-    <img src="zakaria.jpg" alt="Zakaria's photo">
+    <picture>
+      <!-- Use WebP format with JPEG fallback -->
+      <source srcset="zakaria.webp" type="image/webp">
+      <img src="zakaria.jpg" alt="صورة زكريا السروري" loading="lazy" width="200" height="200">
+    </picture>
     <h2>نبذة عني</h2>
     <p>أنا مهندس تقني أطمح لتقديم حلول رقمية ذكية وتحليل البيانات لتحسين القرارات.</p>
   </section>
+  
   <section class="skills">
     <h2>مهاراتي</h2>
     <ul>
@@ -24,10 +52,13 @@
       <li>تصميم مواقع باستخدام HTML وCSS وJavaScript</li>
     </ul>
   </section>
+  
   <footer>
-    <p>تواصل معي: zakaria@example.com</p>
-    <button onclick="showMessage()">انقر لتحية!</button>
+    <p>تواصل معي: <a href="mailto:zakaria@example.com">zakaria@example.com</a></p>
+    <button onclick="showMessage()" type="button">انقر لتحية!</button>
   </footer>
-  <script src="script.js"></script>
+  
+  <!-- Load JavaScript asynchronously -->
+  <script src="script.js" async></script>
 </body>
 </html>
